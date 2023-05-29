@@ -1,0 +1,60 @@
+
+/*----------------------------------------------------------------------- Подключение шрифта -----------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;600;700&display=swap");
+
+/*----------------------------------------------------------------------- Первый блок. Компонент с названием и кнопкой --------------------------------------------------------*/
+.wrapper {
+    max-width: 1248px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    margin: 0 auto; 
+}
+.wrapper--width {
+    padding: 16px ;
+}
+.wrapper__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+   
+}
+.wrapper__header__title, 
+.wrapper__header__button__upload {
+    display: flex;
+    align-items: center;
+}
+.wrapper__title__analytic {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #37476A;
+}
+
+.wrapper__header__button__upload {
+    border-radius: 6px;
+    background: rgba(178, 194, 228, 0.4);
+    width: 164px;
+    height: 28px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* Цвет фона при нажатии. Написано для проверки кнопки */
+.wrapper__header__button__upload:active {
+    background-color: red;
+}
+
+.wrapper__header__button__upload--title {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7C8EB5;
+}

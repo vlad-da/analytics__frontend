@@ -1,0 +1,101 @@
+.smile {
+    display: flex;
+    justify-content: space-between;
+}
+.smile__wrapper__speedometr {
+    margin-bottom: -95px;
+}
+.smile__wrapper__speedometr__sections {
+    --g:0px; /* The gap between shapes*/
+    --s:30px; /* the size*/
+  
+    height: 166px;
+    width: 166px;
+    position:relative;
+    display:inline-block;
+    overflow:hidden;
+    z-index: 1;
+  }
+  .smile__wrapper__speedometr__sections > * {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border:var(--s) solid var(--c,#D9E0EF);
+    border-radius:50%;
+    transform:rotate(-18deg);
+    
+    clip-path:polygon(
+      calc(50% + var(--g)) 50%, 
+      calc(50% + var(--g)) 0%, 
+      calc(86.327% - var(--g)) 0%,
+      50% calc(50% - var(--g))); 
+  }
+
+  .smile__wrapper__speedometr__sections__block-1 {
+    transform:rotate(59deg);
+    --c:#D9E0EF;
+  }
+  .smile__wrapper__speedometr__sections__block-2 {
+    transform:rotate(21deg);
+    --c:#D9E0EF;
+  }
+  .smile__wrapper__speedometr__sections__block-3 {
+    transform:rotate(-57deg);
+    --c:#D9E0EF;
+  }
+  .smile__wrapper__speedometr__sections__block-4 {
+    transform:rotate(-95deg);
+    --c:#D9E0EF;
+  }
+  .gauge-center {
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 45px solid #465972;
+    border-radius: 2px;
+    top: 52px;
+}
+.smile__wrapper__arrow {
+    margin-left: 30px;
+}
+.smile__wrapper__smile {
+    margin: -40px 0 0 55px;
+}
+
+.smile__wrapper__arrow__index {
+    position: relative;
+    z-index: 1;
+    transform-origin: right center;
+    transform: rotate(00deg);
+}
+
+.smile__wrapper__smile__index {
+    position: relative;
+    z-index: 2;
+}
+.emotions {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top:0px;
+}
+ 
+.emotions__title {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #37476A;
+}
+.emotions__percent {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #4A1193;
+}
