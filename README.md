@@ -1,70 +1,40 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+##Запуск проекта
 ### `npm start`
+Запускает приложение в режиме разработки.
+Занимает 3000 порт, если он свободен.
+Откройте [http://localhost:3000 ](http://localhost:3000 ), чтобы просмотреть его в вашем браузере.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
+##Сборка проекта
 ### `npm run build`
+Создаёт папку build и билдит туда приложение 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Описание
+Проект содержит (на данный момент) 3 компонента:
+1. Обложка (Wrapper) (картинка, название "Общая аналитика" и кнопка "выгрузить результат";
+2. Компонент (Percent) с картинкой микрофона, результатами, комментариями, общим результатом, шкалой в процентах. Компонент помещён в обложку;
+3. Компонент (Smile) со шкалами, смайликами, текстом и процентом. Компонент помещён в обложку.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##Описание root-файла (index.js)
+Создано 3 объекта:
+1.wrapper с передаваемыми в компонент полями title, titleButton, img,
+2.persent с передаваемыми в компонент полями title, description, result, percent,
+3.smiles с передаваемыми в компонент полями title, percent
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Использован компонент Wrapper, куда передавались пропсы: 
+1.title={wrapper.title} - для заголовка обложки
+2.titleButton={wrapper.titleButton} - для текста обложки
+3.note={wrapper.img} - для изобрадения обложки
+4.percent={persent} - пропсы для компонента Percent
+5.smiles={smiles} - пропсы для компонента Smile
 
-### `npm run eject`
+##Wrapper 
+В компонент Wrapper вложены компоненты Percent и Smile с соответствующими пропсами.
+Картинка, заголовок и текст кнопки меняются в зависимости от пропсов (полей объекта wrapper).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##Percent
+Изображение, заголовок, комментарий, текст "результат", процент меняются в зависимости от пропсов (полей объекта persent)
+Заполненность шкалы прогресса меняется в файла percent.css у класса wrapper__scale__grayback в свойстве left
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Smile
+Изображение смайлика, изображение стрелки, заголовок, процент меняются в зависимости от пропсов (полей объекта smiles)
